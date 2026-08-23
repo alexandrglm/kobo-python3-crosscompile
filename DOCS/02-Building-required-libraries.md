@@ -228,4 +228,4 @@ make install
 
 ---
 
-- Next, Step 3, [here](./03-Build-host-python-env)
+- Next, Step 3, [here](./03-Build-host-python-env.md)

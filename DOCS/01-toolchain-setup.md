@@ -33,4 +33,4 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
 ---
 
-- Follow to Step 2, [here](/02-Building-required-libraries.md)
+- Follow to Step 2, [here](./02-Building-required-libraries.md)

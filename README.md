@@ -1,44 +1,111 @@
-# Kobo Clara Colour - Python 3.11.16 Cross-Compilation Guide
+# Kobo Clara Colour (and derivates)
+## Python 3.11.16 Cross-Compilation Guide
 
-
----
+After countless failed attempts, Docker experiments, sysroot nightmares, and GLIBC version errors, the final result is a fully functional Python 3.11.16 with pip, SSL, sqlite3, lzma, and all essential modules running on the Kobo, for the sake of tinkering =) !
 
 ## Process Overview
 
-**The entire proceess is a full headhache** that follows these sequential steps:
+**The entire process is a full headache** that follow this approach:
 
-### 1. Toolchain Setup
+1.   **Toolchain Setup**
+  
 The `crosstool-NG` toolchain is built with exact specifications: GLIBC 2.19, GCC 9.5.0, and Linux headers 3.2.101. This ensures all generated binaries are compatible with the Kobo's kernel and libraries.
 
-### 2. Build Required Libraries
+
+2.   **Build Required Libraries**
+  
 Seven essential libraries are cross-compiled using the toolchain: OpenSSL (SSL/TLS), zlib, bzip2, libffi, libuuid, lzma, and sqlite3. These provide Python's core functionality (HTTPS, compression, UUID, etc.).
 
-### 3. Pre-requisites Before Building Python
+
+3  **Pre-requisites Before Building Python**
+  
 Python 3.11.16 requires a matching Python 3.11 interpreter on the host. This step compiles a native (x86_64) Python 3.11.16 and creates a virtual environment to serve as `--with-build-python` during cross-compilation.
 
-### 4. Cross-Compile Python
+
+
+4. **Cross-Compile Python**
+  
 Using the toolchain and compiled libraries, Python 3.11.16 is cross-compiled for ARMv7 (armhf). The `setup.py` file is patched to fix a cross-compilation bug, and the final product is installed to a staging directory.
 
-### 5. Fixes: Pip, Missing Libraries, Shebangs
+
+
+5. **Latest fixes before deploying**
+  
 After the initial installation, several fixes are applied: pip is installed, OpenSSL libraries are copied to staging, shebangs in pip/scripts are corrected to point to the Kobo's Python location, symlinks are removed (FAT32 compatibility), and permissions are set.
 
-### 6. Deploy to Kobo
+
+6.  **Deploy to Kobo**
+
 A FAT32-compatible tarball (without symlinks) is created and copied to the Kobo's user partition (`/mnt/onboard/.python/`). Wrapper scripts are installed in `/usr/bin/` to set environment variables and execute Python from the user partition.
 
-### 7. Verification
-Comprehensive tests confirm Python, pip, SSL, and all core modules are functioning correctly on the Kobo. A verification script is provided for quick validation.
 
 ---
 
-1. [Prerequisites](#prerequisites)
-2. [Toolchain Setup (crosstool-NG)](#toolchain-setup)
-3. [Building Required Libraries](#building-required-libraries)
-4. [Pre-requisites Before Building Python](#pre-requisites-before-building-python)
-5. [Cross-Compile Python 3.11.16 for the Kobo](#cross-compile-python-31116-for-the-kobo)
-6. [Fixes: Pip, Missing Libraries, Shebangs and Others](#fixes-pip-missing-libraries-shebangs-and-others)
-7. [Deploying to the Kobo](#deploying-to-the-kobo)
-8. [Verification](#verification)
-9. [Troubleshooting](#troubleshooting)
+- [Prerequisites](#prerequisites)
+
+- [Part 1: Toolchain Setup](#part-1-toolchain-setup)
+
+- [Part 2: Building Required Libraries](#part-2-building-required-libraries)
+  - [2.1 Building Each Library](#21-building-each-library)
+    - [2.1.1 Set Base Environment](#211-set-base-environment)
+    - [2.1.2 Build zlib (1.3.1)](#212-build-zlib-131)
+    - [2.1.3 Build bzip2 (1.0.8)](#213-build-bzip2-108)
+    - [2.1.4 Build libffi (3.4.6)](#214-build-libffi-346)
+    - [2.1.5 Build libuuid (util-linux 2.40.2)](#215-build-libuuid-util-linux-2402)
+    - [2.1.6 Build OpenSSL (1.1.1w)](#216-build-openssl-111w)
+    - [2.1.7 Build lzma (xz-utils 5.6.2)](#217-build-lzma-xz-utils-562)
+    - [2.1.8 Build sqlite3 (3.46.0)](#218-build-sqlite3-3460)
+
+- [Part 3: Pre-requisites Before Building Python](#part-3--pre-requisites-before-building-python)
+  - [3.1 Download and Compile the Host Python](#31-download-and-compile-the-host-python)
+  - [3.2 Create a Python 3.11 Virtual Environment for the Host](#32-create-a-python-311-virtual-environment-for-the-host)
+
+- [Part 4: Cross-Compile Python 3.11.16 for the Kobo](#part-4-cross-compile-python-31116-for-the-kobo)
+  - [4.1 Extract Fresh Python Source for Cross-Compilation](#41-extract-fresh-python-source-for-cross-compilation)
+  - [4.2 Fix `setup.py` (CRITICAL)](#42-fix-setuppy-critical)
+  - [4.3 Configure Python for Cross-Compilation](#43-configure-python-for-cross-compilation)
+    - [4.3.1 Activate the Host Virtual Environment](#431-activate-the-host-virtual-environment)
+    - [4.3.2 Set the Cross-Compilation Toolchain](#432-set-the-cross-compilation-toolchain)
+    - [4.3.3 Run `./configure` with All Libraries](#433-run-configure-with-all-libraries)
+    - [4.3.4 Verify Configure Success](#434-verify-configure-success)
+  - [4.4 Build Python](#44--build-python)
+    - [4.4.1 Check Build Output](#441-check-build-output)
+  - [4.5 Install to Staging Directory](#45--install-to-staging-directory)
+
+- [Part 5: Fixes for Pip, Missing Libraries, Shebangs and Others](#part-5-fixes-for-pip-missing-libraries-shebangs-and-others)
+  - [5.1 Install Pip to Staging](#51-install-pip-to-staging)
+  - [5.2 Copy OpenSSL Libraries to Staging](#52-copy-openssl-libraries-to-staging)
+  - [5.3 Fix Pip Shebangs](#53-fix-pip-shebangs)
+  - [5.4 Fix Any Other Script Shebangs](#54-fix-any-other-script-shebangs)
+  - [5.5 Remove Symlinks (FAT32 Compatibility)](#55-remove-symlinks-fat32-compatibility)
+  - [5.6 Set Correct Permissions](#56-set-correct-permissions)
+  - [5.7 Verify Staging Directory Completeness](#57-verify-staging-directory-completeness)
+
+- [Part 6: Deploying to the Kobo](#part-6-deploying-to-the-kobo)
+  - [6.1 Create FAT32-Compatible Tarball](#61-create-fat32-compatible-tarball)
+  - [6.2 Choose Installation Location on Kobo](#62-choose-installation-location-on-kobo)
+  - [6.3 Create Python Wrapper Script](#63--create-python-wrapper-script)
+  - [6.4 Create Pip Wrapper Script](#64--create-pip-wrapper-script)
+  - [6.5 Create Convenience Symlinks](#65--create-convenience-symlinks)
+
+- [Part 7: Verification](#part-7--verification)
+  - [7.1 Test Python](#71--test-python)
+  - [7.2 Test Core Modules](#72-test-core-modules)
+  - [7.3 Test SSL (CRITICAL)](#73-test-ssl-critical)
+  - [7.4 Test Pip with HTTPS](#74-test-pip-with-https)
+
+- [Part 8: Troubleshooting](#part-8-troubleshooting)
+- [Important Notes](#important-notes)
+- [Quick Reference Commands](#quick-reference-commands)
+- [Version Information](#version-information)
+- [Final Directory Structure on Kobo](#final-directory-structure-on-kobo)
+
+- [9. What's Next? What about `numpy` or other compiled modules?](#10-whats-next-what-about-numpy-or-other-compiled-modules)
+  - [9.1 pip Works Fine](#101-pip-works-fine)
+  - [9.2 Compiled Modules](#102-compiled-modules)
+  - [9.3 So... How to Install Compiled Modules?](#103-so-how-to-install-compiled-modules)
+    - [Option 1: Pre-compiled Wheels (Best)](#option-1-pre-compiled-wheels-best)
+    - [Option 2: Cross-Compile on Your PC](#option-2-cross-compile-on-your-pc)
 
 ---
 
@@ -1021,5 +1088,126 @@ scp ${BASE}/openssl-armhf-install/lib/libcrypto.so.1.1 root@192.168.1.216:/mnt/o
         └── python3.11/
 ```
 ---
+
+## 9. What's Next? What about `numpy` or other compiled modules?
+
+> [!NOTE]
+> This Python 3.11.16 installation on the Kobo is fully functional with pip, SSL, and all core modules working correctly.
+
+### 9.1 pip Works Fine
+
+```bash
+[root@kobo ~]# pip install jsonify
+-sh: pip: not found
+[root@kobo ~]# pip3 install jsonify
+Collecting jsonify
+  Downloading jsonify-0.5.tar.gz (1.0 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Building wheels for collected packages: jsonify
+  Building wheel for jsonify (pyproject.toml) ... done
+  Created wheel for jsonify: filename=jsonify-0.5-py3-none-any.whl size=1564 sha256=1f65f5d1c969bfc2d649347266f9f6afa6a9cd09c28b272ef50a1383fc33ddba
+  Stored in directory: /.cache/pip/wheels/8b/0b/70/cd8a2f72ec6e8dbab2d7fffe3e8a545f4d152255cc7e8541f5
+Successfully built jsonify
+Installing collected packages: jsonify
+Successfully installed jsonify-0.5
+
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+```
+
+### 9.2 Compiled Modules
+
+> [!IMPORTANT]
+> **Pure Python packages** (like `requests`, `beautifulsoup4`, `flask`, `click`, etc.) install without issues because they contain only Python code.
+>
+> **Compiled packages** (like `numpy`, `scipy`, `pillow`, `lxml`, `cryptography`, etc.) require compilation of C/C++ code, which **fails on the Kobo** because:
+>  - The Kobo has no compiler (`gcc` or `make`)
+>  - The Kobo has no build tools (`cmake`, `ninja`, etc.)
+>- The Kobo has limited memory and storage
+
+
+> [!TIP]
+> Most common Python packages (requests, flask, beautifulsoup4, etc.) are pure Python and work without any issues. Only specialised scientific/computational packages require extra effort. For the Kobo's typical use case (web scraping, automation, simple scripts), pure Python packages.
+
+
+
+### 9.3   So... How to Install Compiled Modules?
+
+There are two ways to install compiled modules on the Kobo:
+
+#### Option 1:   Pre-compiled Wheels (Best)
+
+If a pre-compiled wheel exists for your platform (ARMv7, Python 3.11), pip will download and install it directly.  
+Many popular packages have pre-compiled wheels for ARMv7 (`linux_armv7l`, `manylinux2014_armv7l`, `musllinux_1_1_armv7l`). However, not all packages provide these.
+
+-  Try to install with --only-binary to force wheel installation:
+```bash
+pip3 install numpy --only-binary numpy
+```
+
+#### Option 2: Cross-Compile on Your PC
+
+If no pre-compiled wheel exists, you must cross-compile the module on your PC using the same toolchain used for Python.
+
+**Example: Cross-compiling NumPy**
+
+- On your PC (with crosstool-NG toolchain):
+```bash
+export PATH="${HOME}/x-tools/arm-unknown-linux-gnueabihf/bin:${PATH}"
+export CC=arm-unknown-linux-gnueabihf-gcc
+export CXX=arm-unknown-linux-gnueabihf-g++
+export SYSROOT="${HOME}/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot"
+```
+
+- Create a cross-compilation environment using `crossenv`:
+```bash
+pip3 install crossenv
+
+python3 -m crossenv \
+  --host ${CC} \
+  --sysroot ${SYSROOT} \
+  ${BASE}/.venv/bin/python3.11 \
+  ${BASE}/numpy-crossenv
+
+source ${BASE}/numpy-crossenv/bin/activate
+```
+
+- Build numpy for ARM. The wheel will be generated in dist/ or you can find it in the build directory:
+
+```bash
+pip3 install numpy
+```
+
+- After building, copy the resulting `.whl` or the compiled `.so` files to the Kobo:
+
+```bash
+scp dist/numpy-*.whl root@192.168.1.216:/tmp/
+pip3 install /tmp/numpy-*.whl
+```
+
+
+### 9.5 Quick Check for Available Wheels
+
+```bash
+# Check if a pre-compiled wheel exists for your platform
+pip3 download --no-deps --platform linux_armv7l --python-version 3.11 --abi cp311 <package-name>
+
+# Example
+pip3 download --no-deps --platform linux_armv7l --python-version 3.11 --abi cp311 numpy
+# If it downloads a .whl file, it exists.
+```
+
+
+- **Pure Python packages:** Work perfectly.
+- **Compiled packages:** 
+  - Check for pre-compiled wheels first (`pip3 install --only-binary`)
+  - If no wheel exists, cross-compile on your PC using the crosstool-NG toolchain
+  - Copy the compiled files to the Kobo
+
+
+---
+
+
 
 *Last Updated: August 2026*

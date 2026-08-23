@@ -164,13 +164,17 @@ wget https://www.openssl.org/source/openssl-1.1.1w.tar.gz
 tar -xzf openssl-1.1.1w.tar.gz
 cd openssl-1.1.1w
 
-CC=arm-unknown-linux-gnueabihf-gcc AR=... RANLIB=... \
+CC=arm-unknown-linux-gnueabihf-gcc \
+AR=arm-unknown-linux-gnueabihf-ar \
+RANLIB=arm-unknown-linux-gnueabihf-ranlib \
 ./Configure linux-generic32 \
+  --prefix=${BASE}/openssl-armhf-install \
+  --openssldir=/usr/lib/ssl \
   -march=armv7-a -mfpu=neon-vfpv4 -mfloat-abi=hard \
   shared no-tests
 
 make -j$(nproc)
-make install
+make install_sw
 ```
 
 ---

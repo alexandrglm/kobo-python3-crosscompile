@@ -33,28 +33,38 @@ cd Python-3.11.16
 > [!WARNING]
 > **Python's `setup.py` has a cross-compilation bug.**
 >
-> It uses `dpkg-architecture` from the **host** system to determine include paths, not the target's sysroot. This causes it to add host headers (`/usr/include/arm-linux-gnueabihf`) instead of sysroot headers, breaking the build.
+> The `add_multiarch_paths()` method calls `dpkg-architecture` from the **host** system to determine include/library paths, not the target's sysroot. This causes it to add real host headers (`/usr/include/arm-linux-gnueabihf`, your Debian's own modern glibc) instead of the toolchain's sysroot headers — silently breaking compilation for almost every module (`unicodedata`, `_ssl`, `_hashlib`, etc.), not just SSL-related ones.
 >
-> **The Fix:** Comment out the `get_host_architecture()` block in `setup.py`.
+> **The Fix:** Make `add_multiarch_paths()` a no-op by inserting an early `return`.
 
-**Lines to edit (around line 720 in Python 3.11.16):**
+**Function to patch (around line 688 in Python 3.11.16):**
 
 ```python
-# dpkg_architecture = get_host_architecture()
-# if dpkg_architecture:
-#     host_platform = dpkg_architecture[0]
-#     multiarch = dpkg_architecture[1]
+    def add_multiarch_paths(self):
+        return  # disabled: breaks cross-compile with crosstool-NG sysroot
+        # Debian/Ubuntu multiarch support.
+        # https://wiki.ubuntu.com/MultiarchSpec
+        tmpfile = os.path.join(self.build_temp, 'multiarch')
+        ...
 ```
 
 **Apply the fix with sed:**
 
 ```bash
-sed -i '720,735s/^/# /' setup.py
+cp setup.py setup.py.orig
+
+sed -i '/def add_multiarch_paths(self):/a\        return  # disabled: breaks cross-compile with crosstool-NG sysroot' setup.py
 ```
 
-Or manually edit `setup.py` and comment out the `get_host_architecture()` block.  
+**Verify the patch:**
 
--  A fixed `setup.py` for Python 3.11.16 **is provided [here](./py31116-fixes/setup.py).**
+```bash
+sed -n '685,695p' setup.py
+```
+
+You should see `return` immediately after `def add_multiarch_paths(self):`, followed by the original (now dead) code.
+
+- A pre-patched `setup.py` for Python 3.11.16 **is provided [here](https://github.com/alexandrglm/kobo-python3-crosscompile/blob/ac2aa0ef2678e2d52d6383dc1a19673a5035a1e7/py-3.11.16-cross-fixes/setup.py).**
 
 ---
 
@@ -86,7 +96,21 @@ export RANLIB=arm-unknown-linux-gnueabihf-ranlib
 > The `BASE` variable is used here for clarity. **In practice, you should use absolute paths** to avoid any ambiguity.
 
 ```bash
-CONFIG_SITE=${BASE}/config.site \
+cd ${BASE}/Python-3.11.16
+
+source ${BASE}/.venv/bin/activate
+export PATH="${HOME}/x-tools/arm-unknown-linux-gnueabihf/bin:${PATH}"
+
+CC=arm-unknown-linux-gnueabihf-gcc \
+CXX=arm-unknown-linux-gnueabihf-g++ \
+AR=arm-unknown-linux-gnueabihf-ar \
+RANLIB=arm-unknown-linux-gnueabihf-ranlib \
+ac_cv_file__dev_ptmx=yes \
+ac_cv_file__dev_ptc=no \
+ac_cv_func_getentropy=no \
+ac_cv_func_getrandom=no \
+CPPFLAGS="-I${BASE}/zlib-armhf-install/include -I${BASE}/bzip2-armhf-install/include -I${BASE}/libffi-armhf-install/include -I${BASE}/util-linux-armhf-install/include/uuid -I${BASE}/xz-armhf-install/include -I${BASE}/sqlite3-armhf-install/include" \
+LDFLAGS="-L${BASE}/zlib-armhf-install/lib -L${BASE}/bzip2-armhf-install/lib -L${BASE}/libffi-armhf-install/lib -L${BASE}/util-linux-armhf-install/lib -L${BASE}/xz-armhf-install/lib -L${BASE}/sqlite3-armhf-install/lib" \
 ./configure \
   --host=arm-unknown-linux-gnueabihf \
   --build=x86_64-linux-gnu \
@@ -95,13 +119,7 @@ CONFIG_SITE=${BASE}/config.site \
   --with-build-python=${BASE}/.venv/bin/python3.11 \
   --with-openssl=${BASE}/openssl-armhf-install \
   --with-ensurepip=install \
-  --disable-ipv6 \
-  ac_cv_file__dev_ptmx=yes \
-  ac_cv_file__dev_ptc=no \
-  ac_cv_func_getentropy=no \
-  ac_cv_func_getrandom=no \
-  CPPFLAGS="-I${BASE}/zlib-armhf-install/include -I${BASE}/bzip2-armhf-install/include -I${BASE}/libffi-armhf-install/include -I${BASE}/util-linux-armhf-install/include/uuid -I${BASE}/xz-armhf-install/include -I${BASE}/sqlite3-armhf-install/include" \
-  LDFLAGS="-L${BASE}/zlib-armhf-install/lib -L${BASE}/bzip2-armhf-install/lib -L${BASE}/libffi-armhf-install/lib -L${BASE}/util-linux-armhf-install/lib -L${BASE}/xz-armhf-install/lib -L${BASE}/sqlite3-armhf-install/lib"
+  --disable-ipv6
 ```
 
 | Flag | Purpose |

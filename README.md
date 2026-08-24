@@ -3,6 +3,8 @@
 
 After countless failed attempts, Docker experiments, sysroot nightmares, and GLIBC version errors, the final result is a fully functional Python 3.11.16 with pip, SSL, sqlite3, lzma, and all essential modules running on the Kobo, for the sake of tinkering =) !
 
+![](./DOCS/screenshot_20260824_035250.png)
+
 This repository documents the entire process, step by step, from building a custom `crosstool-NG` toolchain to deploying a working Python interpreter on the device's FAT32 user partition. Every step is broken down into its own document under [`DOCS/`](./DOCS), in the exact order they must be followed.
 
 ---

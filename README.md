@@ -13,21 +13,21 @@ This repository documents the entire process, step by step, from building a cust
 
 **The entire process is a full headache** that follows this approach:
 
-1. **Toolchain Setup**. The `crosstool-NG` toolchain is built with exact specifications: GLIBC 2.19, GCC 9.5.0, and Linux headers 3.2.101. This ensures all generated binaries are compatible with the Kobo's kernel and libraries.
+1. [**Toolchain Setup**](./DOCS/01-toolchain-setup.md). The `crosstool-NG` toolchain is built with exact specifications: GLIBC 2.19, GCC 9.5.0, and Linux headers 3.2.101. This ensures all generated binaries are compatible with the Kobo's kernel and libraries.
 
-2. **Build Required Libraries**. Seven essential libraries are cross-compiled using the toolchain: OpenSSL (SSL/TLS), zlib, bzip2, libffi, libuuid, lzma, and sqlite3. These provide Python's core functionality (HTTPS, compression, UUID, etc.).
+2. [**Build Required Libraries**](./DOCS/02-Building-required-libraries.md). Seven essential libraries are cross-compiled using the toolchain: OpenSSL (SSL/TLS), zlib, bzip2, libffi, libuuid, lzma, and sqlite3. These provide Python's core functionality (HTTPS, compression, UUID, etc.).
 
-3. **Pre-requisites Before Building Python**. Python 3.11.16 requires a matching Python 3.11 interpreter on the host. This step compiles a native (x86_64) Python 3.11.16 and creates a virtual environment to serve as `--with-build-python` during cross-compilation.
+3. [**Pre-requisites Before Building Python**](./DOCS/03-Build-host-python-env.md). Python 3.11.16 requires a matching Python 3.11 interpreter on the host. This step compiles a native (x86_64) Python 3.11.16 and creates a virtual environment to serve as `--with-build-python` during cross-compilation.
 
-4. **Cross-Compile Python**. Using the toolchain and compiled libraries, Python 3.11.16 is cross-compiled for ARMv7 (armhf). The `setup.py` file is patched to fix a cross-compilation bug, and the final product is installed to a staging directory.
+4. [**Cross-Compile Python**](./DOCS/04-Crosscompile-kobo-python.md). Using the toolchain and compiled libraries, Python 3.11.16 is cross-compiled for ARMv7 (armhf). The `setup.py` file is patched to fix a cross-compilation bug, and the final product is installed to a staging directory.
 
-5. **Latest Fixes Before Deploying**. After the initial installation, several fixes are applied: pip is installed, OpenSSL libraries are copied to staging, shebangs in pip/scripts are corrected to point to the Kobo's Python location, symlinks are removed (FAT32 compatibility), and permissions are set.
+5. [**Latest Fixes Before Deploying**](./DOCS/05-Fix-PIP-Libraries.md). After the initial installation, several fixes are applied: pip is installed, OpenSSL libraries are copied to staging, shebangs in pip/scripts are corrected to point to the Kobo's Python location, symlinks are removed (FAT32 compatibility), and permissions are set.
 
-6. **Deploy to Kobo**. A FAT32-compatible tarball (without symlinks) is created and copied to the Kobo's user partition (`/mnt/onboard/.python/`). Wrapper scripts are installed in `/usr/bin/` to set environment variables and execute Python from the user partition.
+6. [**Deploy to Kobo**](./DOCS/06-Deploying-to-kobo.md). A FAT32-compatible tarball (without symlinks) is created and copied to the Kobo's user partition (`/mnt/onboard/.python/`). Wrapper scripts are installed in `/usr/bin/` to set environment variables and execute Python from the user partition.
 
-7. **Verification**. Core modules, SSL, and pip are tested directly on the device.
+7. [**Verification**](./DOCS/07-Verify-installation-works.md). Core modules, SSL, and pip tested directly on the device.
 
-8. **Compiling Compiled pip Modules**. Notes on installing packages that require native compilation (`numpy`, `cryptography`, etc.), which the Kobo itself cannot build.
+8. [**Compiling Compiled pip Modules**](./DOCS/08-Compiling-compiled-PIP-modules.md). Notes on installing packages that require native compilation (`numpy`, `cryptography`, etc.), which the Kobo itself cannot build.
 
 ---
 

@@ -18,6 +18,18 @@
 > [!WARNING]
 > The Kobo's user partition is FAT32, which does not support symbolic links. We use `--hard-dereference` and `--dereference` to convert symlinks to regular files.
 
+
+---
+
+### 6.2 Deployment Options
+
+> [!NOTE]
+> There are two ways to deploy Python to the Kobo. Choose the one that fits your needs.
+
+**Option A: FAT32 Partition (`/mnt/onboard/.python/`)**
+
+This is the default option described below. The FAT32 partition has plenty of space, but does not support symlinks.
+
 1.  Create tarball without symlinks (FAT32 compatible)
 
 ```bash
@@ -29,6 +41,10 @@ tar --owner=root --group=root \
     --dereference \
     -czf KoboPythonUserSpace.tgz usr/
 ```
+
+**Option B: System Root (`/usr/local/python/`)**
+
+If you prefer to install Python in the system root, skip to [Section 6.6](#66-option-b-system-root-deployment).
 
 ---
 
@@ -131,6 +147,101 @@ EOF
 chmod +x /usr/bin/pip
 ```
 
+
+---
+
+### 6.6 Option B: System Root Deployment (`/usr/local/python/`)
+
+> [!NOTE]
+> This option installs Python directly in the system root. Ext4 supports symbolic links.
+
+#### 6.6.1 Prepare System Root Tarball
+
+```bash
+cd ${BASE}/py311kobo-final
+
+# No special flags needed - ext4 supports symlinks
+tar -czf KoboRoot.tgz usr/
+```
+
+#### 6.6.2 Deploy to Kobo
+
+```bash
+# Copy tarball
+scp KoboRoot.tgz root@192.168.1.216:/mnt/onboard/
+
+# Extract to root
+ssh root@192.168.1.216
+cd /
+tar -xzf /mnt/onboard/KoboRoot.tgz
+rm /mnt/onboard/KoboRoot.tgz
+```
+
+**Final structure:**
+```
+./usr/
+└── local
+    └── python
+        ├── bin
+        ├── include
+        │   ├── openssl
+        │   └── python3.11
+        ├── lib
+        │   ├── engines-1.1
+        │   ├── pkgconfig
+        │   └── python3.11
+        └── share
+            └── man
+
+```
+
+#### 6.6.3 Create Wrappers (System Root)
+
+```bash
+ssh root@192.168.1.216
+
+# Python3 wrapper
+cat > /usr/bin/python3 << 'EOF'
+#!/bin/sh
+export PATH="/usr/local/python/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/local/python/lib:$LD_LIBRARY_PATH"
+export PYTHONHOME="/usr/local/python"
+exec /usr/local/python/bin/python3.11 "$@"
+EOF
+chmod +x /usr/bin/python3
+
+# Pip3 wrapper
+cat > /usr/bin/pip3 << 'EOF'
+#!/bin/sh
+export PATH="/usr/local/python/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/local/python/lib:$LD_LIBRARY_PATH"
+export PYTHONHOME="/usr/local/python"
+exec /usr/local/python/bin/pip3 "$@"
+EOF
+chmod +x /usr/bin/pip3
+```
+
+> [!IMPORTANT]
+> For Option B, shebangs in scripts must point to: `#!/usr/local/python/bin/python3.11`
+
+---
+
+### 6.7 Verify Installation (Both Options)
+
+```bash
+# Test Python
+python3 --version
+
+# Test SSL
+python3 -c "import ssl; print(ssl.OPENSSL_VERSION)"
+
+# Test all libraries
+python3 -c "import bz2, lzma, ctypes, zlib; print('All libraries OK')"
+
+# Test pip
+pip3 --version
+pip3 install requests
+```
 
 ---
 

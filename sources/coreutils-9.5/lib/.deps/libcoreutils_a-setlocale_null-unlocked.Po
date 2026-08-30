@@ -1,0 +1,78 @@
+lib/libcoreutils_a-setlocale_null-unlocked.o: \
+ lib/setlocale_null-unlocked.c \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdc-predef.h \
+ lib/config.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include/stdbool.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/assert.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/features.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/sys/cdefs.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/wordsize.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/gnu/stubs.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/gnu/stubs-hard.h \
+ lib/setlocale_null.h lib/stddef.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include/stddef.h \
+ lib/arg-nonnull.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/errno.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/errno.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/linux/errno.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/asm/errno.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/asm-generic/errno.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/asm-generic/errno-base.h \
+ lib/locale.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/locale.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/locale.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/xlocale.h \
+ lib/setlocale_null.h lib/string.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/string.h
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdc-predef.h:
+
+lib/config.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include/stdbool.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/assert.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/features.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/sys/cdefs.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/wordsize.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/gnu/stubs.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/gnu/stubs-hard.h:
+
+lib/setlocale_null.h:
+
+lib/stddef.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include/stddef.h:
+
+lib/arg-nonnull.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/errno.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/errno.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/linux/errno.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/asm/errno.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/asm-generic/errno.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/asm-generic/errno-base.h:
+
+lib/locale.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/locale.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/locale.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/xlocale.h:
+
+lib/setlocale_null.h:
+
+lib/string.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/string.h:

@@ -1,0 +1,10 @@
+prefix=/home/dev/Desktop/ClaraColour/python/crosstoolsng/jpeg-install
+exec_prefix=/home/dev/Desktop/ClaraColour/python/crosstoolsng/jpeg-install
+libdir=/home/dev/Desktop/ClaraColour/python/crosstoolsng/jpeg-install/lib
+includedir=/home/dev/Desktop/ClaraColour/python/crosstoolsng/jpeg-install/include
+
+Name: libjpeg
+Description: A SIMD-accelerated JPEG codec that provides the libjpeg API
+Version: 3.1.0
+Libs: -L${libdir} -ljpeg
+Cflags: -I${includedir}

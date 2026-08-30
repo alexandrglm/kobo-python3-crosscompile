@@ -1,0 +1,11 @@
+prefix=/home/dev/Desktop/ClaraColour/python/crosstoolsng/brotli-install
+exec_prefix=/home/dev/Desktop/ClaraColour/python/crosstoolsng/brotli-install
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libbrotlicommon
+URL: https://github.com/google/brotli
+Description: Brotli common dictionary library
+Version: 1.1.0
+Libs: -L${libdir} -lbrotlicommon
+Cflags: -I${includedir}

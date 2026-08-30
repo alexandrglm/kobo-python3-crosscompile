@@ -1,0 +1,264 @@
+literal.o: literal.c \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdc-predef.h \
+ as.h config.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdio.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/features.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/sys/cdefs.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/wordsize.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/gnu/stubs.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/gnu/stubs-hard.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include/stddef.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/types.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/typesizes.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/libio.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/_G_config.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/wchar.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include/stdarg.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/stdio_lim.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/sys_errlist.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/stdio.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/string.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/xlocale.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/string.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/string2.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdlib.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/waitflags.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/waitstatus.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/endian.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/endian.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/byteswap.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/byteswap-16.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/sys/types.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/time.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/sys/select.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/select.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/sigset.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/time.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/sys/sysmacros.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/pthreadtypes.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/alloca.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/stdlib-bsearch.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/stdlib-float.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/unistd.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/posix_opt.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/environments.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/confname.h \
+ ../include/getopt.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/errno.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/errno.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/linux/errno.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/asm/errno.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/asm-generic/errno.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/asm-generic/errno-base.h \
+ ../include/ansidecl.h ../bfd/bfd.h ../include/symcat.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include/stdint.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdint.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/wchar.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include/stdbool.h \
+ ../include/diagnostics.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/sys/stat.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/stat.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/inttypes.h \
+ ../include/libiberty.h ../include/ansidecl.h ../include/fopen-same.h \
+ asintl.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/locale.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/locale.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/libintl.h \
+ flonum.h bignum.h expr.h targ-env.h config/te-armlinuxeabi.h \
+ config/te-linux.h obj-format.h config/obj-elf.h ../bfd/elf-bfd.h \
+ ../include/elf/common.h ../include/elf/external.h \
+ ../include/elf/internal.h ../include/bfdlink.h targ-cpu.h \
+ config/tc-arm.h write.h frags.h read.h symbols.h ../include/hashtab.h \
+ hash.h tc.h obj.h listing.h subsegs.h ../include/obstack.h
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdc-predef.h:
+
+as.h:
+
+config.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdio.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/features.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/sys/cdefs.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/wordsize.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/gnu/stubs.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/gnu/stubs-hard.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include/stddef.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/types.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/typesizes.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/libio.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/_G_config.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/wchar.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include/stdarg.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/stdio_lim.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/sys_errlist.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/stdio.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/string.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/xlocale.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/string.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/string2.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdlib.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/waitflags.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/waitstatus.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/endian.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/endian.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/byteswap.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/byteswap-16.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/sys/types.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/time.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/sys/select.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/select.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/sigset.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/time.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/sys/sysmacros.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/pthreadtypes.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/alloca.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/stdlib-bsearch.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/stdlib-float.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/unistd.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/posix_opt.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/environments.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/confname.h:
+
+../include/getopt.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/errno.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/errno.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/linux/errno.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/asm/errno.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/asm-generic/errno.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/asm-generic/errno-base.h:
+
+../include/ansidecl.h:
+
+../bfd/bfd.h:
+
+../include/symcat.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include/stdint.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdint.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/wchar.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include/stdbool.h:
+
+../include/diagnostics.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/sys/stat.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/stat.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/inttypes.h:
+
+../include/libiberty.h:
+
+../include/ansidecl.h:
+
+../include/fopen-same.h:
+
+asintl.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/locale.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/locale.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/libintl.h:
+
+flonum.h:
+
+bignum.h:
+
+expr.h:
+
+targ-env.h:
+
+config/te-armlinuxeabi.h:
+
+config/te-linux.h:
+
+obj-format.h:
+
+config/obj-elf.h:
+
+../bfd/elf-bfd.h:
+
+../include/elf/common.h:
+
+../include/elf/external.h:
+
+../include/elf/internal.h:
+
+../include/bfdlink.h:
+
+targ-cpu.h:
+
+config/tc-arm.h:
+
+write.h:
+
+frags.h:
+
+read.h:
+
+symbols.h:
+
+../include/hashtab.h:
+
+hash.h:
+
+tc.h:
+
+obj.h:
+
+listing.h:
+
+subsegs.h:
+
+../include/obstack.h:

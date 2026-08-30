@@ -1,0 +1,61 @@
+libimagedec_la-image_dec.lo: image_dec.c \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdc-predef.h \
+ image_dec.h ../src/webp/types.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include/stddef.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/inttypes.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/features.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/sys/cdefs.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/wordsize.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/gnu/stubs.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/gnu/stubs-hard.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include/stdint.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdint.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/wchar.h \
+ ../src/webp/config.h metadata.h jpegdec.h pngdec.h pnmdec.h tiffdec.h \
+ webpdec.h ../src/webp/decode.h ../src/webp/./types.h wicdec.h
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdc-predef.h:
+
+image_dec.h:
+
+../src/webp/types.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include/stddef.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/inttypes.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/features.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/sys/cdefs.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/wordsize.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/gnu/stubs.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/gnu/stubs-hard.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include/stdint.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdint.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/wchar.h:
+
+../src/webp/config.h:
+
+metadata.h:
+
+jpegdec.h:
+
+pngdec.h:
+
+pnmdec.h:
+
+tiffdec.h:
+
+webpdec.h:
+
+../src/webp/decode.h:
+
+../src/webp/./types.h:
+
+wicdec.h:

@@ -1,0 +1,85 @@
+unictype/libgnu_a-ctype_cntrl.o: unictype/ctype_cntrl.c \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdc-predef.h \
+ ../config.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include/stdbool.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/assert.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/features.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/sys/cdefs.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/wordsize.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/gnu/stubs.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/gnu/stubs-hard.h \
+ unictype.h unitypes.h stdint.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include/stdint.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdint.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/wchar.h \
+ limits.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include-fixed/limits.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include-fixed/syslimits.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/limits.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/posix1_lim.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/local_lim.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/linux/limits.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/posix2_lim.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/xopen_lim.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/stdio_lim.h \
+ stddef.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include/stddef.h \
+ unictype/bitmap.h unictype/ctype_cntrl.h
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdc-predef.h:
+
+../config.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include/stdbool.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/assert.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/features.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/sys/cdefs.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/wordsize.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/gnu/stubs.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/gnu/stubs-hard.h:
+
+unictype.h:
+
+unitypes.h:
+
+stdint.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include/stdint.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdint.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/wchar.h:
+
+limits.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include-fixed/limits.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include-fixed/syslimits.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/limits.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/posix1_lim.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/local_lim.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/linux/limits.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/posix2_lim.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/xopen_lim.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/stdio_lim.h:
+
+stddef.h:
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include/stddef.h:
+
+unictype/bitmap.h:
+
+unictype/ctype_cntrl.h:

@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /home/dev/Desktop/ClaraColour/python/crosstoolsng/pillow-crossenv/build/bin/python "$@"

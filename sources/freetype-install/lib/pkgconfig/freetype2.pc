@@ -1,0 +1,14 @@
+prefix=/home/dev/Desktop/ClaraColour/python/crosstoolsng/freetype-install
+exec_prefix=/home/dev/Desktop/ClaraColour/python/crosstoolsng/freetype-install
+libdir=/home/dev/Desktop/ClaraColour/python/crosstoolsng/freetype-install/lib
+includedir=/home/dev/Desktop/ClaraColour/python/crosstoolsng/freetype-install/include
+
+Name: FreeType 2
+URL: https://freetype.org
+Description: A free, high-quality, and portable font engine.
+Version: 26.2.20
+Requires: 
+Requires.private: zlib, bzip2, libpng, libbrotlidec
+Libs: -L/home/dev/Desktop/ClaraColour/python/crosstoolsng/freetype-install/lib -lfreetype
+Libs.private: 
+Cflags: -I${includedir}/freetype2

@@ -1,0 +1,638 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      The system is: Linux - 6.12.101+deb13-amd64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.31/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/3.31.6/CompilerIdC/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-VVVBlE"
+      binary: "/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-VVVBlE"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-VVVBlE'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4e46f/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_4e46f.dir/build.make CMakeFiles/cmTC_4e46f.dir/build
+        gmake[1]: Entering directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-VVVBlE'
+        Building C object CMakeFiles/cmTC_4e46f.dir/CMakeCCompilerABI.c.o
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc   -v -o CMakeFiles/cmTC_4e46f.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.31/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc
+        Target: arm-unknown-linux-gnueabihf
+        Configured with: /home/dev/Desktop/ClaraColour/python/crosstoolsng/crosstool-ng/.build/arm-unknown-linux-gnueabihf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=arm-unknown-linux-gnueabihf --prefix=/home/dev/x-tools/arm-unknown-linux-gnueabihf --exec_prefix=/home/dev/x-tools/arm-unknown-linux-gnueabihf --with-sysroot=/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot --enable-languages=c,c++ --with-arch=armv7-a --with-tune=cortex-a53 --with-fpu=neon-vfpv4 --with-float=hard --with-pkgversion='crosstool-NG 1.29.0.3_2e5d0b8' --enable-__cxa_atexit --disable-tm-clone-registry --disable-libmudflap --disable-libgomp --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libsanitizer --disable-libmpx --with-gmp=/home/dev/Desktop/ClaraColour/python/crosstoolsng/crosstool-ng/.build/arm-unknown-linux-gnueabihf/buildtools --with-mpfr=/home/dev/Desktop/ClaraColour/python/crosstoolsng/crosstool-ng/.build/arm-unknown-linux-gnueabihf/buildtools --with-mpc=/home/dev/Desktop/ClaraColour/python/crosstoolsng/crosstool-ng/.build/arm-unknown-linux-gnueabihf/buildtools --with-isl=/home/dev/Desktop/ClaraColour/python/crosstoolsng/crosstool-ng/.build/arm-unknown-linux-gnueabihf/buildtools --enable-lto --without-zstd --enable-threads=posix --enable-target-optspace --disable-plugin --disable-nls --disable-multilib --with-local-prefix=/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot --enable-long-long
+        Thread model: posix
+        gcc version 9.5.0 (crosstool-NG 1.29.0.3_2e5d0b8) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4e46f.dir/CMakeCCompilerABI.c.o' '-c'  '-mtune=cortex-a53' '-mfloat-abi=hard' '-mfpu=neon-vfpv4' '-mtls-dialect=gnu' '-marm' '-march=armv7-a+neon-vfpv4'
+         /home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/cc1 -quiet -v /usr/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=cortex-a53 -mfloat-abi=hard -mfpu=neon-vfpv4 -mtls-dialect=gnu -marm -march=armv7-a+neon-vfpv4 -auxbase-strip CMakeFiles/cmTC_4e46f.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccODfTV9.s
+        GNU C17 (crosstool-NG 1.29.0.3_2e5d0b8) version 9.5.0 (arm-unknown-linux-gnueabihf)
+        	compiled by GNU C version 14.2.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include
+         /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include-fixed
+         /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/include
+         /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include
+        End of search list.
+        GNU C17 (crosstool-NG 1.29.0.3_2e5d0b8) version 9.5.0 (arm-unknown-linux-gnueabihf)
+        	compiled by GNU C version 14.2.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 3f6bc8d40e7d055232bcccd7ec992a21
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4e46f.dir/CMakeCCompilerABI.c.o' '-c'  '-mtune=cortex-a53' '-mfloat-abi=hard' '-mfpu=neon-vfpv4' '-mtls-dialect=gnu' '-marm' '-march=armv7-a+neon-vfpv4'
+         /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/bin/as -v -march=armv7-a -mfloat-abi=hard -mfpu=neon-vfpv4 -meabi=5 -o CMakeFiles/cmTC_4e46f.dir/CMakeCCompilerABI.c.o /tmp/ccODfTV9.s
+        GNU assembler version 2.32 (arm-unknown-linux-gnueabihf) using BFD version (crosstool-NG 1.29.0.3_2e5d0b8) 2.32
+        COMPILER_PATH=/home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/bin/
+        LIBRARY_PATH=/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/lib/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/lib/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4e46f.dir/CMakeCCompilerABI.c.o' '-c'  '-mtune=cortex-a53' '-mfloat-abi=hard' '-mfpu=neon-vfpv4' '-mtls-dialect=gnu' '-marm' '-march=armv7-a+neon-vfpv4'
+        Linking C executable cmTC_4e46f
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4e46f.dir/link.txt --verbose=1
+        Using built-in specs.
+        COLLECT_GCC=/home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc
+        COLLECT_LTO_WRAPPER=/home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/lto-wrapper
+        Target: arm-unknown-linux-gnueabihf
+        Configured with: /home/dev/Desktop/ClaraColour/python/crosstoolsng/crosstool-ng/.build/arm-unknown-linux-gnueabihf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=arm-unknown-linux-gnueabihf --prefix=/home/dev/x-tools/arm-unknown-linux-gnueabihf --exec_prefix=/home/dev/x-tools/arm-unknown-linux-gnueabihf --with-sysroot=/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot --enable-languages=c,c++ --with-arch=armv7-a --with-tune=cortex-a53 --with-fpu=neon-vfpv4 --with-float=hard --with-pkgversion='crosstool-NG 1.29.0.3_2e5d0b8' --enable-__cxa_atexit --disable-tm-clone-registry --disable-libmudflap --disable-libgomp --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libsanitizer --disable-libmpx --with-gmp=/home/dev/Desktop/ClaraColour/python/crosstoolsng/crosstool-ng/.build/arm-unknown-linux-gnueabihf/buildtools --with-mpfr=/home/dev/Desktop/ClaraColour/python/crosstoolsng/crosstool-ng/.build/arm-unknown-linux-gnueabihf/buildtools --with-mpc=/home/dev/Desktop/ClaraColour/python/crosstoolsng/crosstool-ng/.build/arm-unknown-linux-gnueabihf/buildtools --with-isl=/home/dev/Desktop/ClaraColour/python/crosstoolsng/crosstool-ng/.build/arm-unknown-linux-gnueabihf/buildtools --enable-lto --without-zstd --enable-threads=posix --enable-target-optspace --disable-plugin --disable-nls --disable-multilib --with-local-prefix=/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot --enable-long-long
+        Thread model: posix
+        gcc version 9.5.0 (crosstool-NG 1.29.0.3_2e5d0b8) 
+        COMPILER_PATH=/home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/bin/
+        LIBRARY_PATH=/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/lib/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/lib/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4e46f'  '-mtune=cortex-a53' '-mfloat-abi=hard' '-mfpu=neon-vfpv4' '-mtls-dialect=gnu' '-marm' '-march=armv7-a+neon-vfpv4'
+         /home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/collect2 -plugin /home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/liblto_plugin.so -plugin-opt=/home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc05ePB4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot --eh-frame-hdr -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_4e46f /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/crt1.o /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/crti.o /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/crtbegin.o -L/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0 -L/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/lib -L/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/lib -L/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib -v CMakeFiles/cmTC_4e46f.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/crtend.o /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/crtn.o
+        collect2 version 9.5.0
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/bin/ld -plugin /home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/liblto_plugin.so -plugin-opt=/home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc05ePB4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot --eh-frame-hdr -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_4e46f /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/crt1.o /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/crti.o /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/crtbegin.o -L/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0 -L/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/lib -L/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/lib -L/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib -v CMakeFiles/cmTC_4e46f.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/crtend.o /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/crtn.o
+        GNU ld (crosstool-NG 1.29.0.3_2e5d0b8) 2.32
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4e46f'  '-mtune=cortex-a53' '-mfloat-abi=hard' '-mfpu=neon-vfpv4' '-mtls-dialect=gnu' '-marm' '-march=armv7-a+neon-vfpv4'
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc  -v -Wl,-v CMakeFiles/cmTC_4e46f.dir/CMakeCCompilerABI.c.o -o cmTC_4e46f
+        gmake[1]: Leaving directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-VVVBlE'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "/usr/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include]
+          add: [/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include-fixed]
+          add: [/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/include]
+          add: [/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include]
+        end of search list found
+        collapse include dir [/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include] ==> [/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include]
+        collapse include dir [/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include-fixed] ==> [/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include-fixed]
+        collapse include dir [/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/include] ==> [/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/include]
+        collapse include dir [/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include] ==> [/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include]
+        implicit include dirs: [/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include;/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include-fixed;/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/include;/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "/usr/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-VVVBlE']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4e46f/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_4e46f.dir/build.make CMakeFiles/cmTC_4e46f.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-VVVBlE']
+        ignore line: [Building C object CMakeFiles/cmTC_4e46f.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc   -v -o CMakeFiles/cmTC_4e46f.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.31/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc]
+        ignore line: [Target: arm-unknown-linux-gnueabihf]
+        ignore line: [Configured with: /home/dev/Desktop/ClaraColour/python/crosstoolsng/crosstool-ng/.build/arm-unknown-linux-gnueabihf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=arm-unknown-linux-gnueabihf --prefix=/home/dev/x-tools/arm-unknown-linux-gnueabihf --exec_prefix=/home/dev/x-tools/arm-unknown-linux-gnueabihf --with-sysroot=/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot --enable-languages=c c++ --with-arch=armv7-a --with-tune=cortex-a53 --with-fpu=neon-vfpv4 --with-float=hard --with-pkgversion='crosstool-NG 1.29.0.3_2e5d0b8' --enable-__cxa_atexit --disable-tm-clone-registry --disable-libmudflap --disable-libgomp --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libsanitizer --disable-libmpx --with-gmp=/home/dev/Desktop/ClaraColour/python/crosstoolsng/crosstool-ng/.build/arm-unknown-linux-gnueabihf/buildtools --with-mpfr=/home/dev/Desktop/ClaraColour/python/crosstoolsng/crosstool-ng/.build/arm-unknown-linux-gnueabihf/buildtools --with-mpc=/home/dev/Desktop/ClaraColour/python/crosstoolsng/crosstool-ng/.build/arm-unknown-linux-gnueabihf/buildtools --with-isl=/home/dev/Desktop/ClaraColour/python/crosstoolsng/crosstool-ng/.build/arm-unknown-linux-gnueabihf/buildtools --enable-lto --without-zstd --enable-threads=posix --enable-target-optspace --disable-plugin --disable-nls --disable-multilib --with-local-prefix=/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot --enable-long-long]
+        ignore line: [Thread model: posix]
+        ignore line: [gcc version 9.5.0 (crosstool-NG 1.29.0.3_2e5d0b8) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4e46f.dir/CMakeCCompilerABI.c.o' '-c'  '-mtune=cortex-a53' '-mfloat-abi=hard' '-mfpu=neon-vfpv4' '-mtls-dialect=gnu' '-marm' '-march=armv7-a+neon-vfpv4']
+        ignore line: [ /home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/cc1 -quiet -v /usr/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=cortex-a53 -mfloat-abi=hard -mfpu=neon-vfpv4 -mtls-dialect=gnu -marm -march=armv7-a+neon-vfpv4 -auxbase-strip CMakeFiles/cmTC_4e46f.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccODfTV9.s]
+        ignore line: [GNU C17 (crosstool-NG 1.29.0.3_2e5d0b8) version 9.5.0 (arm-unknown-linux-gnueabihf)]
+        ignore line: [	compiled by GNU C version 14.2.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include]
+        ignore line: [ /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include-fixed]
+        ignore line: [ /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/include]
+        ignore line: [ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C17 (crosstool-NG 1.29.0.3_2e5d0b8) version 9.5.0 (arm-unknown-linux-gnueabihf)]
+        ignore line: [	compiled by GNU C version 14.2.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 3f6bc8d40e7d055232bcccd7ec992a21]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4e46f.dir/CMakeCCompilerABI.c.o' '-c'  '-mtune=cortex-a53' '-mfloat-abi=hard' '-mfpu=neon-vfpv4' '-mtls-dialect=gnu' '-marm' '-march=armv7-a+neon-vfpv4']
+        ignore line: [ /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/bin/as -v -march=armv7-a -mfloat-abi=hard -mfpu=neon-vfpv4 -meabi=5 -o CMakeFiles/cmTC_4e46f.dir/CMakeCCompilerABI.c.o /tmp/ccODfTV9.s]
+        ignore line: [GNU assembler version 2.32 (arm-unknown-linux-gnueabihf) using BFD version (crosstool-NG 1.29.0.3_2e5d0b8) 2.32]
+        ignore line: [COMPILER_PATH=/home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/bin/]
+        ignore line: [LIBRARY_PATH=/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/lib/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/lib/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4e46f.dir/CMakeCCompilerABI.c.o' '-c'  '-mtune=cortex-a53' '-mfloat-abi=hard' '-mfpu=neon-vfpv4' '-mtls-dialect=gnu' '-marm' '-march=armv7-a+neon-vfpv4']
+        ignore line: [Linking C executable cmTC_4e46f]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4e46f.dir/link.txt --verbose=1]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc]
+        ignore line: [COLLECT_LTO_WRAPPER=/home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/lto-wrapper]
+        ignore line: [Target: arm-unknown-linux-gnueabihf]
+        ignore line: [Configured with: /home/dev/Desktop/ClaraColour/python/crosstoolsng/crosstool-ng/.build/arm-unknown-linux-gnueabihf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=arm-unknown-linux-gnueabihf --prefix=/home/dev/x-tools/arm-unknown-linux-gnueabihf --exec_prefix=/home/dev/x-tools/arm-unknown-linux-gnueabihf --with-sysroot=/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot --enable-languages=c c++ --with-arch=armv7-a --with-tune=cortex-a53 --with-fpu=neon-vfpv4 --with-float=hard --with-pkgversion='crosstool-NG 1.29.0.3_2e5d0b8' --enable-__cxa_atexit --disable-tm-clone-registry --disable-libmudflap --disable-libgomp --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libsanitizer --disable-libmpx --with-gmp=/home/dev/Desktop/ClaraColour/python/crosstoolsng/crosstool-ng/.build/arm-unknown-linux-gnueabihf/buildtools --with-mpfr=/home/dev/Desktop/ClaraColour/python/crosstoolsng/crosstool-ng/.build/arm-unknown-linux-gnueabihf/buildtools --with-mpc=/home/dev/Desktop/ClaraColour/python/crosstoolsng/crosstool-ng/.build/arm-unknown-linux-gnueabihf/buildtools --with-isl=/home/dev/Desktop/ClaraColour/python/crosstoolsng/crosstool-ng/.build/arm-unknown-linux-gnueabihf/buildtools --enable-lto --without-zstd --enable-threads=posix --enable-target-optspace --disable-plugin --disable-nls --disable-multilib --with-local-prefix=/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot --enable-long-long]
+        ignore line: [Thread model: posix]
+        ignore line: [gcc version 9.5.0 (crosstool-NG 1.29.0.3_2e5d0b8) ]
+        ignore line: [COMPILER_PATH=/home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/bin/]
+        ignore line: [LIBRARY_PATH=/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/lib/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/lib/:/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4e46f'  '-mtune=cortex-a53' '-mfloat-abi=hard' '-mfpu=neon-vfpv4' '-mtls-dialect=gnu' '-marm' '-march=armv7-a+neon-vfpv4']
+        link line: [ /home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/collect2 -plugin /home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/liblto_plugin.so -plugin-opt=/home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc05ePB4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot --eh-frame-hdr -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_4e46f /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/crt1.o /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/crti.o /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/crtbegin.o -L/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0 -L/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/lib -L/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/lib -L/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib -v CMakeFiles/cmTC_4e46f.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/crtend.o /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/crtn.o]
+          arg [/home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cc05ePB4.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--sysroot=/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib/ld-linux-armhf.so.3] ==> ignore
+          arg [-X] ==> ignore
+          arg [-m] ==> ignore
+          arg [armelf_linux_eabi] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_4e46f] ==> ignore
+          arg [/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/crt1.o] ==> obj [/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/crt1.o]
+          arg [/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/crti.o] ==> obj [/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/crti.o]
+          arg [/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/crtbegin.o] ==> obj [/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/crtbegin.o]
+          arg [-L/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0] ==> dir [/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0]
+          arg [-L/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/lib] ==> dir [/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/lib]
+          arg [-L/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/lib] ==> dir [/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/lib]
+          arg [-L/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib] ==> dir [/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_4e46f.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/crtend.o] ==> obj [/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/crtend.o]
+          arg [/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/crtn.o] ==> obj [/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/crtn.o]
+        ignore line: [collect2 version 9.5.0]
+        ignore line: [/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/bin/ld -plugin /home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/liblto_plugin.so -plugin-opt=/home/dev/x-tools/arm-unknown-linux-gnueabihf/libexec/gcc/arm-unknown-linux-gnueabihf/9.5.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc05ePB4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot --eh-frame-hdr -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_4e46f /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/crt1.o /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/crti.o /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/crtbegin.o -L/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0 -L/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/lib -L/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/lib -L/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib -v CMakeFiles/cmTC_4e46f.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/crtend.o /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/crtn.o]
+        linker tool for 'C': /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/bin/ld
+        collapse library dir [/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0] ==> [/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0]
+        collapse library dir [/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/lib] ==> [/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/lib]
+        collapse library dir [/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/lib] ==> [/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/lib]
+        collapse library dir [/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib] ==> [/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/crt1.o;/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/crti.o;/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/crtbegin.o;/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/crtend.o;/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib/crtn.o]
+        implicit dirs: [/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0;/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/lib;/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/lib;/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/usr/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "/usr/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Running the C compiler's linker: "/home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/../../../../arm-unknown-linux-gnueabihf/bin/ld" "-v"
+      GNU ld (crosstool-NG 1.29.0.3_2e5d0b8) 2.32
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/CheckTypeSize.cmake:262 (check_include_file)"
+      - "CMakeLists.txt:462 (check_type_size)"
+    checks:
+      - "Looking for sys/types.h"
+    directories:
+      source: "/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-FaOqxT"
+      binary: "/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-FaOqxT"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-FaOqxT'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b6d87/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b6d87.dir/build.make CMakeFiles/cmTC_b6d87.dir/build
+        gmake[1]: Entering directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-FaOqxT'
+        Building C object CMakeFiles/cmTC_b6d87.dir/CheckIncludeFile.c.o
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc    -o CMakeFiles/cmTC_b6d87.dir/CheckIncludeFile.c.o -c /home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-FaOqxT/CheckIncludeFile.c
+        Linking C executable cmTC_b6d87
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b6d87.dir/link.txt --verbose=1
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc CMakeFiles/cmTC_b6d87.dir/CheckIncludeFile.c.o -o cmTC_b6d87
+        gmake[1]: Leaving directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-FaOqxT'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/CheckTypeSize.cmake:263 (check_include_file)"
+      - "CMakeLists.txt:462 (check_type_size)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-343xmA"
+      binary: "/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-343xmA"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-343xmA'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1d39f/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1d39f.dir/build.make CMakeFiles/cmTC_1d39f.dir/build
+        gmake[1]: Entering directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-343xmA'
+        Building C object CMakeFiles/cmTC_1d39f.dir/CheckIncludeFile.c.o
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc    -o CMakeFiles/cmTC_1d39f.dir/CheckIncludeFile.c.o -c /home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-343xmA/CheckIncludeFile.c
+        Linking C executable cmTC_1d39f
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d39f.dir/link.txt --verbose=1
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc CMakeFiles/cmTC_1d39f.dir/CheckIncludeFile.c.o -o cmTC_1d39f
+        gmake[1]: Leaving directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-343xmA'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/CheckTypeSize.cmake:264 (check_include_file)"
+      - "CMakeLists.txt:462 (check_type_size)"
+    checks:
+      - "Looking for stddef.h"
+    directories:
+      source: "/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-9oVpR2"
+      binary: "/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-9oVpR2"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_STDDEF_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-9oVpR2'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_0c213/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_0c213.dir/build.make CMakeFiles/cmTC_0c213.dir/build
+        gmake[1]: Entering directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-9oVpR2'
+        Building C object CMakeFiles/cmTC_0c213.dir/CheckIncludeFile.c.o
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc    -o CMakeFiles/cmTC_0c213.dir/CheckIncludeFile.c.o -c /home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-9oVpR2/CheckIncludeFile.c
+        Linking C executable cmTC_0c213
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0c213.dir/link.txt --verbose=1
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc CMakeFiles/cmTC_0c213.dir/CheckIncludeFile.c.o -o cmTC_0c213
+        gmake[1]: Leaving directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-9oVpR2'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/CheckTypeSize.cmake:156 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/CheckTypeSize.cmake:283 (__check_type_size_impl)"
+      - "CMakeLists.txt:462 (check_type_size)"
+    checks:
+      - "Check size of size_t"
+    directories:
+      source: "/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-5EbgRI"
+      binary: "/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-5EbgRI"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_SIZE_T"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-5EbgRI'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_dff7f/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_dff7f.dir/build.make CMakeFiles/cmTC_dff7f.dir/build
+        gmake[1]: Entering directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-5EbgRI'
+        Building C object CMakeFiles/cmTC_dff7f.dir/SIZE_T.c.o
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc    -o CMakeFiles/cmTC_dff7f.dir/SIZE_T.c.o -c /home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-5EbgRI/SIZE_T.c
+        Linking C executable cmTC_dff7f
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dff7f.dir/link.txt --verbose=1
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc CMakeFiles/cmTC_dff7f.dir/SIZE_T.c.o -o cmTC_dff7f
+        gmake[1]: Leaving directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-5EbgRI'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/CheckTypeSize.cmake:156 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/CheckTypeSize.cmake:283 (__check_type_size_impl)"
+      - "CMakeLists.txt:463 (check_type_size)"
+    checks:
+      - "Check size of unsigned long"
+    directories:
+      source: "/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-Yv339O"
+      binary: "/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-Yv339O"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_UNSIGNED_LONG"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-Yv339O'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_46cdb/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_46cdb.dir/build.make CMakeFiles/cmTC_46cdb.dir/build
+        gmake[1]: Entering directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-Yv339O'
+        Building C object CMakeFiles/cmTC_46cdb.dir/UNSIGNED_LONG.c.o
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc    -o CMakeFiles/cmTC_46cdb.dir/UNSIGNED_LONG.c.o -c /home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-Yv339O/UNSIGNED_LONG.c
+        Linking C executable cmTC_46cdb
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_46cdb.dir/link.txt --verbose=1
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc CMakeFiles/cmTC_46cdb.dir/UNSIGNED_LONG.c.o -o cmTC_46cdb
+        gmake[1]: Leaving directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-Yv339O'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:466 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_BUILTIN_CTZL"
+    directories:
+      source: "/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-DbJx01"
+      binary: "/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-DbJx01"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_BUILTIN_CTZL"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-DbJx01'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_cbfcd/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_cbfcd.dir/build.make CMakeFiles/cmTC_cbfcd.dir/build
+        gmake[1]: Entering directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-DbJx01'
+        Building C object CMakeFiles/cmTC_cbfcd.dir/src.c.o
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc -DHAVE_BUILTIN_CTZL   -o CMakeFiles/cmTC_cbfcd.dir/src.c.o -c /home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-DbJx01/src.c
+        Linking C executable cmTC_cbfcd
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cbfcd.dir/link.txt --verbose=1
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc CMakeFiles/cmTC_cbfcd.dir/src.c.o -o cmTC_cbfcd
+        gmake[1]: Leaving directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-DbJx01'
+        
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckSourceRuns.cmake:99 (try_run)"
+      - "/usr/share/cmake-3.31/Modules/CheckCSourceRuns.cmake:52 (cmake_check_source_runs)"
+      - "CMakeLists.txt:478 (check_c_source_runs)"
+    checks:
+      - "Performing Test RIGHT_SHIFT_IS_UNSIGNED"
+    directories:
+      source: "/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-gEeZ21"
+      binary: "/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-gEeZ21"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "RIGHT_SHIFT_IS_UNSIGNED_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-gEeZ21'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a458f/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a458f.dir/build.make CMakeFiles/cmTC_a458f.dir/build
+        gmake[1]: Entering directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-gEeZ21'
+        Building C object CMakeFiles/cmTC_a458f.dir/src.c.o
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc -DRIGHT_SHIFT_IS_UNSIGNED   -o CMakeFiles/cmTC_a458f.dir/src.c.o -c /home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-gEeZ21/src.c
+        Linking C executable cmTC_a458f
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a458f.dir/link.txt --verbose=1
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc CMakeFiles/cmTC_a458f.dir/src.c.o -o cmTC_a458f
+        gmake[1]: Leaving directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-gEeZ21'
+        
+      exitCode: 0
+    runResult:
+      variable: "RIGHT_SHIFT_IS_UNSIGNED_EXITCODE"
+      cached: true
+      stdout: |
+      stderr: |
+        /home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-gEeZ21/cmTC_a458f: 1: Syntax error: word unexpected (expecting ")")
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:501 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HIDDEN_WORKS"
+    directories:
+      source: "/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-kbN5pg"
+      binary: "/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-kbN5pg"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HIDDEN_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-kbN5pg'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_775c0/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_775c0.dir/build.make CMakeFiles/cmTC_775c0.dir/build
+        gmake[1]: Entering directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-kbN5pg'
+        Building C object CMakeFiles/cmTC_775c0.dir/src.c.o
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc -DHIDDEN_WORKS   -o CMakeFiles/cmTC_775c0.dir/src.c.o -c /home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-kbN5pg/src.c
+        Linking C executable cmTC_775c0
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_775c0.dir/link.txt --verbose=1
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc CMakeFiles/cmTC_775c0.dir/src.c.o -o cmTC_775c0
+        gmake[1]: Leaving directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-kbN5pg'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:525 (check_c_source_compiles)"
+    checks:
+      - "Performing Test INLINE_WORKS"
+    directories:
+      source: "/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-BBt2M6"
+      binary: "/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-BBt2M6"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "INLINE_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-BBt2M6'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bc8b8/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_bc8b8.dir/build.make CMakeFiles/cmTC_bc8b8.dir/build
+        gmake[1]: Entering directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-BBt2M6'
+        Building C object CMakeFiles/cmTC_bc8b8.dir/src.c.o
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc -DINLINE_WORKS   -o CMakeFiles/cmTC_bc8b8.dir/src.c.o -c /home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-BBt2M6/src.c
+        Linking C executable cmTC_bc8b8
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bc8b8.dir/link.txt --verbose=1
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc CMakeFiles/cmTC_bc8b8.dir/src.c.o -o cmTC_bc8b8
+        gmake[1]: Leaving directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-BBt2M6'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:542 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_THREAD_LOCAL"
+    directories:
+      source: "/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-dZc3Gf"
+      binary: "/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-dZc3Gf"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_THREAD_LOCAL"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-dZc3Gf'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_254e3/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_254e3.dir/build.make CMakeFiles/cmTC_254e3.dir/build
+        gmake[1]: Entering directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-dZc3Gf'
+        Building C object CMakeFiles/cmTC_254e3.dir/src.c.o
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc -DHAVE_THREAD_LOCAL   -o CMakeFiles/cmTC_254e3.dir/src.c.o -c /home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-dZc3Gf/src.c
+        Linking C executable cmTC_254e3
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_254e3.dir/link.txt --verbose=1
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc CMakeFiles/cmTC_254e3.dir/src.c.o -o cmTC_254e3
+        gmake[1]: Leaving directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-dZc3Gf'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:555 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_VERSION_SCRIPT"
+    directories:
+      source: "/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-CaXMkL"
+      binary: "/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-CaXMkL"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_VERSION_SCRIPT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-CaXMkL'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e1408/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e1408.dir/build.make CMakeFiles/cmTC_e1408.dir/build
+        gmake[1]: Entering directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-CaXMkL'
+        Building C object CMakeFiles/cmTC_e1408.dir/src.c.o
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc -DHAVE_VERSION_SCRIPT  -Wl,--version-script,/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/conftest.map -o CMakeFiles/cmTC_e1408.dir/src.c.o -c /home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-CaXMkL/src.c
+        Linking C executable cmTC_e1408
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e1408.dir/link.txt --verbose=1
+        /home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc  -Wl,--version-script,/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/conftest.map CMakeFiles/cmTC_e1408.dir/src.c.o -o cmTC_e1408
+        gmake[1]: Leaving directory '/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build/CMakeFiles/CMakeScratch/TryCompile-CaXMkL'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/CheckLanguage.cmake:140 (message)"
+      - "simd/CMakeLists.txt:46 (check_language)"
+    checks:
+      - "Looking for a ASM_NASM compiler"
+    message: |
+      Looking for a ASM_NASM compiler failed with the following output:
+      -- The ASM_NASM compiler identification is unknown
+      -- Didn't find assembler
+      CMake Error at CMakeLists.txt:3 (project):
+        No CMAKE_ASM_NASM_COMPILER could be found.
+      
+        Tell CMake where to find the compiler by setting either the environment
+        variable "ASM_NASM" or the CMake cache entry CMAKE_ASM_NASM_COMPILER to the
+        full path to the compiler, or to the compiler name if it is in the PATH.
+      
+      
+      -- Configuring incomplete, errors occurred!
+      
+...

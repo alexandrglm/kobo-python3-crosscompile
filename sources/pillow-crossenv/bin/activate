@@ -1,0 +1,2 @@
+. /home/dev/Desktop/ClaraColour/python/crosstoolsng/pillow-crossenv/cross/bin/activate
+export PATH=/home/dev/Desktop/ClaraColour/python/crosstoolsng/pillow-crossenv/bin:$PATH

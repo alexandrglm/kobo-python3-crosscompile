@@ -1,0 +1,12 @@
+prefix=/home/dev/Desktop/ClaraColour/python/crosstoolsng/libxml2-armhf-install
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+modules=1
+
+Name: libXML
+Version: 2.12.7
+Description: libXML library version2.
+Requires: 
+Libs: -L${libdir} -lxml2   -L/home/dev/Desktop/ClaraColour/python/crosstoolsng/zlib-armhf-install/lib -lz   -lm  
+Cflags: -I${includedir}/libxml2 

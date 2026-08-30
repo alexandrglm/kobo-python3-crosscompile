@@ -1,0 +1,3 @@
+set CC_FOR_TARGET "arm-unknown-linux-gnueabihf-gcc"
+set CXX_FOR_TARGET "arm-unknown-linux-gnueabihf-g++"
+set compiler_vendor "gnu"

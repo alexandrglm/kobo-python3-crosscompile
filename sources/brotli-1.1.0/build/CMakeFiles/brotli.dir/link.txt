@@ -1,0 +1,1 @@
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc -O3 -DNDEBUG CMakeFiles/brotli.dir/c/tools/brotli.c.o -o brotli  -Wl,-rpath,/home/dev/Desktop/ClaraColour/python/crosstoolsng/brotli-1.1.0/build: libbrotlienc.so.1.1.0 libbrotlidec.so.1.1.0 libbrotlicommon.so.1.1.0 -lm

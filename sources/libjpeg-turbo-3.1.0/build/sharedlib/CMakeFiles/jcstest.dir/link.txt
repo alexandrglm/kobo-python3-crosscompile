@@ -1,0 +1,1 @@
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc -O3 -DNDEBUG CMakeFiles/jcstest.dir/__/src/jcstest.c.o -o ../jcstest  -Wl,-rpath,/home/dev/Desktop/ClaraColour/python/crosstoolsng/libjpeg-turbo-3.1.0/build ../libjpeg.so.62.4.0

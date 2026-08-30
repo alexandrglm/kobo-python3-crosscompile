@@ -1,0 +1,11 @@
+flonum-konst.o: flonum-konst.c \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdc-predef.h \
+ ../include/ansidecl.h flonum.h bignum.h
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdc-predef.h:
+
+../include/ansidecl.h:
+
+flonum.h:
+
+bignum.h:

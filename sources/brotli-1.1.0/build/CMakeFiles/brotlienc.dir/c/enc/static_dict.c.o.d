@@ -1,0 +1,37 @@
+CMakeFiles/brotlienc.dir/c/enc/static_dict.c.o: \
+ /home/dev/Desktop/ClaraColour/python/crosstoolsng/brotli-1.1.0/c/enc/static_dict.c \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdc-predef.h \
+ /home/dev/Desktop/ClaraColour/python/crosstoolsng/brotli-1.1.0/c/enc/static_dict.h \
+ /home/dev/Desktop/ClaraColour/python/crosstoolsng/brotli-1.1.0/c/include/brotli/types.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include/stddef.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/arm-unknown-linux-gnueabihf/9.5.0/include/stdint.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdint.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/features.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/sys/cdefs.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/wordsize.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/gnu/stubs.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/gnu/stubs-hard.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/wchar.h \
+ /home/dev/Desktop/ClaraColour/python/crosstoolsng/brotli-1.1.0/c/enc/../common/dictionary.h \
+ /home/dev/Desktop/ClaraColour/python/crosstoolsng/brotli-1.1.0/c/include/brotli/port.h \
+ /home/dev/Desktop/ClaraColour/python/crosstoolsng/brotli-1.1.0/c/enc/../common/platform.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/string.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/xlocale.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/string.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/string2.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdlib.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/endian.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/endian.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/byteswap.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/types.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/typesizes.h \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/bits/byteswap-16.h \
+ /home/dev/Desktop/ClaraColour/python/crosstoolsng/brotli-1.1.0/c/enc/encoder_dict.h \
+ /home/dev/Desktop/ClaraColour/python/crosstoolsng/brotli-1.1.0/c/include/brotli/shared_dictionary.h \
+ /home/dev/Desktop/ClaraColour/python/crosstoolsng/brotli-1.1.0/c/enc/compound_dictionary.h \
+ /home/dev/Desktop/ClaraColour/python/crosstoolsng/brotli-1.1.0/c/enc/../common/constants.h \
+ /home/dev/Desktop/ClaraColour/python/crosstoolsng/brotli-1.1.0/c/enc/../common/platform.h \
+ /home/dev/Desktop/ClaraColour/python/crosstoolsng/brotli-1.1.0/c/enc/memory.h \
+ /home/dev/Desktop/ClaraColour/python/crosstoolsng/brotli-1.1.0/c/enc/static_dict_lut.h \
+ /home/dev/Desktop/ClaraColour/python/crosstoolsng/brotli-1.1.0/c/enc/../common/transform.h \
+ /home/dev/Desktop/ClaraColour/python/crosstoolsng/brotli-1.1.0/c/enc/find_match_length.h

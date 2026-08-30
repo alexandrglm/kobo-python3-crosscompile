@@ -1,0 +1,16 @@
+src/arm/sysv.lo: ../src/arm/sysv.S \
+ /home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdc-predef.h \
+ fficonfig.h include/ffi.h include/ffitarget.h ../include/ffi_cfi.h \
+ ../src/arm/internal.h
+
+/home/dev/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot/usr/include/stdc-predef.h:
+
+fficonfig.h:
+
+include/ffi.h:
+
+include/ffitarget.h:
+
+../include/ffi_cfi.h:
+
+../src/arm/internal.h:
